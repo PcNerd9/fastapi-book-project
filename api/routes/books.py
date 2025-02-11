@@ -46,9 +46,7 @@ async def get_books() -> OrderedDict[int, Book]:
 
 @router.get("/{book_id}", response_model=Book, status_code=status.HTTP_200_OK)
 async def get_a_book(book_id: int):
-    """
-    return book that has the id book_id
-    """
+
     book = db.get_book(book_id)
     if book is not None:
         return JSONResponse(status_code=status.HTTP_200_OK, content=book.model_dump())
