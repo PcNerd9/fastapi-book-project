@@ -22,7 +22,7 @@ jobs:
           script: |
             mkdir -p ~/deploy
             cd ~/deploy
-            git pull origin main
+            git pull origin main #pull from the main branch
             source .venv/bin/activate
             pip install --upgrade pip
             pip install -r requirements.txt
