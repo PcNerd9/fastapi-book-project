@@ -23,7 +23,6 @@ jobs:
             mkdir -p ~/deploy
             cd ~/deploy
             git pull origin main
-            sudo apt install python3.8-venv
             source .venv/bin/activate
             pip install --upgrade pip
             pip install -r requirements.txt
